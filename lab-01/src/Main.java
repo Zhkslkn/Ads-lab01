@@ -17,74 +17,94 @@ public class Main {
                 9. Binomial coefficient
                 10. Find the GCD
                 """);
-        int ln = scanner.nextInt();
-        switch (ln) {
-            case 1: case 2: case 7:
-                System.out.println("Сколько чисел должно быть в массиве");
-                int n = scanner.nextInt();
-                int[] array = createArr(n);
-                if (ln == 1) {
-                    int min = FindMin.findMinFromArr(array, n);
-                    System.out.println("Minimum is " + min);
-                }
-                if (ln == 2) {
-                    double average = FindAverage.findAverageFromArr(array, 0, n);
-                    System.out.println("Average is " + average);
-                }
-                if (ln == 7) {
-                    int[] reverseOrder = FindReverse.findReverseFromArr(array,0, n-1);
-                    for(int i:reverseOrder)
-                        System.out.print(i+" ");
-                }
-            case 3: case 4: case 5:
-                System.out.println("Введите число..");
-                int enterNum = scanner.nextInt();
-                if (ln == 3) {
-                    boolean isPrime = FindPrime.findPrimeFromArr(enterNum, 2);
-                    if (isPrime) {
-                        System.out.println("Prime");
-                    } else {
-                        System.out.println("Composite");
+        while (true) {
+            int ln = scanner.nextInt();
+            switch (ln) {
+                case 1:
+                case 2:
+                case 7:
+                    System.out.println("Сколько чисел должно быть в массиве");
+                    int n = scanner.nextInt();
+                    int[] array = createArr(n);
+                    if (ln == 1) {
+                        int min = FindMin.findMinFromArr(array, n);
+                        System.out.println("Minimum is " + min);
+                        continue;
                     }
-                }
-                if (ln == 4) {
-                    int factResNum = FindFactorial.findFactorialFromArr(enterNum);
-                    System.out.println(factResNum);
-                }
-                if (ln == 5) {
-                    int fibonacciNum = FindFibonacci.findFibonacciFromArr(enterNum);
-                    System.out.println(fibonacciNum);
-                }
-            case 6:
-                System.out.println("Введите число a..");
-                int a = scanner.nextInt();
-                System.out.println("Введите число n..");
-                int degree = scanner.nextInt();
-                int numFromDegree = FindDegree.FindDegreeFromArr(a, degree);
-                System.out.println(numFromDegree);
-            case 8:
-                System.out.println("Введите строку..");
-                String str = scan.nextLine();
-                boolean isDigit = FindDigit.findDigitInString(str);
-                if (isDigit) {
-                    System.out.println("Yes");
-                } else {
-                    System.out.println("No");
-                }
-            case 9:
-                System.out.println("Введите число n..");
-                int koef = scanner.nextInt();
-                System.out.println("Введите число k..");
-                int k = scanner.nextInt();
-                int numFromBinom = FindBinom.findBinomFromNums(koef, k);
-                System.out.println(numFromBinom);
+                    if (ln == 2) {
+                        double average = FindAverage.findAverageFromArr(array, 0, n);
+                        System.out.println("Average is " + average);
+                        continue;
+                    }
+                    if (ln == 7) {
+                        int[] reverseOrder = FindReverse.findReverseFromArr(array, 0, n - 1);
+                        for (int i : reverseOrder)
+                            System.out.print(i + " ");
+                        continue;
+                    }
+                case 3:
+                case 4:
+                case 5:
+                    System.out.println("Введите число..");
+                    int enterNum = scanner.nextInt();
+                    if (ln == 3) {
+                        boolean isPrime = FindPrime.findPrimeFromArr(enterNum, 2);
+                        if (isPrime) {
+                            System.out.println("Prime");
+                        } else {
+                            System.out.println("Composite");
+                        }
+                        continue;
+                    }
+                    if (ln == 4) {
+                        int factResNum = FindFactorial.findFactorialFromArr(enterNum);
+                        System.out.println(factResNum);
+                        continue;
+                    }
+                    if (ln == 5) {
+                        int fibonacciNum = FindFibonacci.findFibonacciFromArr(enterNum);
+                        System.out.println(fibonacciNum);
+                        continue;
+                    }
+                case 6:
+                    System.out.println("Введите число a..");
+                    int a = scanner.nextInt();
+                    System.out.println("Введите число n..");
+                    int degree = scanner.nextInt();
+                    int numFromDegree = FindDegree.FindDegreeFromArr(a, degree);
+                    System.out.println(numFromDegree);
+                    continue;
+                case 8:
+                    System.out.println("Введите строку..");
+                    String str = scan.nextLine();
+                    boolean isDigit = FindDigit.findDigitInString(str);
+                    if (isDigit) {
+                        System.out.println("Yes");
+                    } else {
+                        System.out.println("No");
+                    }
+                    continue;
+                case 9:
+                    System.out.println("Введите число n..");
+                    int koef = scanner.nextInt();
+                    System.out.println("Введите число k..");
+                    int k = scanner.nextInt();
+                    int numFromBinom = FindBinom.findBinomFromNums(koef, k);
+                    System.out.println(numFromBinom);
+                    continue;
+                case 10:
+                    System.out.println("Введите число a..");
+                    int first = scanner.nextInt();
+                    System.out.println("Введите число b..");
+                    int second = scanner.nextInt();
+                    int numFromGcd = FindGcd.findGcd(first, second);
+                    System.out.println(numFromGcd);
+                    continue;
 
-
-            default:
-                throw new IllegalStateException("Unexpected value: " + ln);
+                default:
+                    throw new IllegalStateException("Unexpected value: " + ln);
+            }
         }
-
-
 
     }
 
