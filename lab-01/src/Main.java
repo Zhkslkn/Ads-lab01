@@ -49,6 +49,14 @@ public class Main {
                     int fibonacciNum = FindFibonacci.findFibonacciFromArr(enterNum);
                     System.out.println(fibonacciNum);
                 }
+            case 6:
+                System.out.println("Введите число a..");
+                int a = scanner.nextInt();
+                System.out.println("Введите число n..");
+                int degree = scanner.nextInt();
+                int numFromDegree = FindDegree.FindDegreeFromArr(a, degree);
+                System.out.println(numFromDegree);
+
 
 
             default:
