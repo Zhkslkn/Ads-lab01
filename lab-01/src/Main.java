@@ -18,7 +18,7 @@ public class Main {
                 """);
         int ln = scanner.nextInt();
         switch (ln) {
-            case 1: case 2:
+            case 1: case 2: case 7:
                 System.out.println("Сколько чисел должно быть в массиве");
                 int n = scanner.nextInt();
                 int[] array = createArr(n);
@@ -29,6 +29,11 @@ public class Main {
                 if (ln == 2) {
                     double average = FindAverage.findAverageFromArr(array, 0, n);
                     System.out.println("Average is " + average);
+                }
+                if (ln == 7) {
+                    int[] reverseOrder = FindReverse.findReverseFromArr(array,0, n-1);
+                    for(int i:reverseOrder)
+                        System.out.print(i+" ");
                 }
             case 3: case 4: case 5:
                 System.out.println("Введите число..");
