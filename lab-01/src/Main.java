@@ -30,20 +30,26 @@ public class Main {
                     double average = FindAverage.findAverageFromArr(array, 0, n);
                     System.out.println("Average is " + average);
                 }
-            case 3:
+            case 3: case 4: case 5:
                 System.out.println("Введите число..");
-                int primeNum = scanner.nextInt();
-                boolean isPrime = FindPrime.findPrimeFromArr(primeNum, 2);
-                if (isPrime) {
-                    System.out.println("Prime");
-                } else {
-                    System.out.println("Composite");
+                int enterNum = scanner.nextInt();
+                if (ln == 3) {
+                    boolean isPrime = FindPrime.findPrimeFromArr(enterNum, 2);
+                    if (isPrime) {
+                        System.out.println("Prime");
+                    } else {
+                        System.out.println("Composite");
+                    }
                 }
-            case 4:
-                System.out.println("Введите число..");
-                int factNum = scanner.nextInt();
-                int factResNum = FindFactorial.findFactorialFromArr(factNum);
-                System.out.println(factResNum);
+                if (ln == 4) {
+                    int factResNum = FindFactorial.findFactorialFromArr(enterNum);
+                    System.out.println(factResNum);
+                }
+                if (ln == 5) {
+                    int fibonacciNum = FindFibonacci.findFibonacciFromArr(enterNum);
+                    System.out.println(fibonacciNum);
+                }
+
 
             default:
                 throw new IllegalStateException("Unexpected value: " + ln);
