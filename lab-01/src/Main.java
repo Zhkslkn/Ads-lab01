@@ -71,6 +71,13 @@ public class Main {
                 } else {
                     System.out.println("No");
                 }
+            case 9:
+                System.out.println("Введите число n..");
+                int koef = scanner.nextInt();
+                System.out.println("Введите число k..");
+                int k = scanner.nextInt();
+                int numFromBinom = FindBinom.findBinomFromNums(koef, k);
+                System.out.println(numFromBinom);
 
 
             default:
