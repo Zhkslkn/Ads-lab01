@@ -30,6 +30,20 @@ public class Main {
                     double average = FindAverage.findAverageFromArr(array, 0, n);
                     System.out.println("Average is " + average);
                 }
+            case 3:
+                System.out.println("Введите число..");
+                int primeNum = scanner.nextInt();
+                boolean isPrime = FindPrime.findPrimeFromArr(primeNum, 2);
+                if (isPrime) {
+                    System.out.println("Prime");
+                } else {
+                    System.out.println("Composite");
+                }
+            case 4:
+                System.out.println("Введите число..");
+                int factNum = scanner.nextInt();
+                int factResNum = FindFactorial.findFactorialFromArr(factNum);
+                System.out.println(factResNum);
 
             default:
                 throw new IllegalStateException("Unexpected value: " + ln);
