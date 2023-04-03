@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
         System.out.println("Введите число от функции, с которым вы хотите воспользоваться:");
         System.out.println("""
                 1. Find the minimum value
@@ -61,7 +62,15 @@ public class Main {
                 int degree = scanner.nextInt();
                 int numFromDegree = FindDegree.FindDegreeFromArr(a, degree);
                 System.out.println(numFromDegree);
-
+            case 8:
+                System.out.println("Введите строку..");
+                String str = scan.nextLine();
+                boolean isDigit = FindDigit.findDigitInString(str);
+                if (isDigit) {
+                    System.out.println("Yes");
+                } else {
+                    System.out.println("No");
+                }
 
 
             default:
