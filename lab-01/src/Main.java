@@ -16,8 +16,10 @@ public class Main {
                 8. Is all digits check
                 9. Binomial coefficient
                 10. Find the GCD
+                0. To exit the program
                 """);
         while (true) {
+            System.out.println("Введите число от функции");
             int ln = scanner.nextInt();
             switch (ln) {
                 case 1:
@@ -100,6 +102,9 @@ public class Main {
                     int numFromGcd = FindGcd.findGcd(first, second);
                     System.out.println(numFromGcd);
                     continue;
+
+                case 0:
+                    System.exit(0);
 
                 default:
                     throw new IllegalStateException("Unexpected value: " + ln);
