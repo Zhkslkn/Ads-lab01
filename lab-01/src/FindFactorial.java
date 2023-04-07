@@ -1,4 +1,9 @@
 public class FindFactorial {
+/*
+    @ findFactorialFromArr - method to find the factorial
+    @ num - the number
+    @ return - returning factorial value of the number
+*/
     public static int findFactorialFromArr(int num)
     {
         if (num >= 1)

@@ -50,7 +50,7 @@ public class Main {
                     System.out.println("Введите число..");
                     int enterNum = scanner.nextInt();
                     if (ln == 3) {
-                        boolean isPrime = FindPrime.findPrimeFromArr(enterNum, 2);
+                        boolean isPrime = FindPrime.findPrimeNum(enterNum, 2);
                         if (isPrime) {
                             System.out.println("Prime");
                         } else {
@@ -73,7 +73,7 @@ public class Main {
                     int a = scanner.nextInt();
                     System.out.println("Введите число n..");
                     int degree = scanner.nextInt();
-                    int numFromDegree = FindDegree.FindDegreeFromArr(a, degree);
+                    int numFromDegree = FindDegree.findDegreeFromArr(a, degree);
                     System.out.println(numFromDegree);
                     continue;
                 case 8:

@@ -1,4 +1,9 @@
 public class FindFibonacci {
+/*
+    @ findFibonacciFromArr - method to find the fibonacci
+    @ num - the number
+    @ return - returning fibonacci value of the number
+*/
     public static int findFibonacciFromArr(int num) {
         if (num == 0) {
             return 0;

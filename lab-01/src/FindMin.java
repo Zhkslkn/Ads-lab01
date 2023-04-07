@@ -1,6 +1,11 @@
 public class FindMin {
+/*
+    @ findMinFromArr - the method to find the minimum value
+    @ arr - the array
+    @ n - the length of the array
+    @ return - returning minimum value of the function
+*/
     public static int findMinFromArr(int[] arr, int n){
-//        3 5 6 2 8
         if(n==1)
             return arr[0];
         else{
