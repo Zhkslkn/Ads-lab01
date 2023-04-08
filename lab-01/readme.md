@@ -1,7 +1,7 @@
 # :milky_way: First Assignment
 
 ## Actually there are 10 tasks of the first laboratory work.
-1. Find the minimum value
+1. :icecream: Find the minimum value[^1]
 2. Find the average value
 3. Check for prime number
 4. Factorial
@@ -11,3 +11,5 @@
 8. Is all digits check
 9. Binomial coefficient
 10. Find the GCD
+
+[^1]: :icecream: Task 1 module src
