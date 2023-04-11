@@ -1,9 +1,17 @@
 import java.util.Scanner;
 
 public class Main {
+    /*
+        in the function main, there are gathered all 10 tasks functions and the direct
+        conversation with user will be done in this file. Firstly, when the user runs the program, he will be asked to
+        choose one of the tasks he needed by entering number from 1 to 10, otherwise 0 if he wants to exit the program.
+    */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Scanner scan = new Scanner(System.in);
+        /*
+            The list of 10 tasks, which the program can solve, user can enter to the console.
+        */
         System.out.println("Введите число от функции, с которым вы хотите воспользоваться:");
         System.out.println("""
                 1. Find the minimum value
@@ -21,6 +29,9 @@ public class Main {
         while (true) {
             System.out.println("Введите число от функции");
             int ln = scanner.nextInt();
+            /*
+                There is switch case to choose 1 of the 10 cases, and run the appropriate function.
+            */
             switch (ln) {
                 case 1:
                 case 2:
@@ -113,6 +124,9 @@ public class Main {
 
     }
 
+    /*
+        The function createArr is creates an array by the given length.
+    */
     public static int[] createArr(int n) {
         Scanner scanner = new Scanner(System.in);
         int[] array = new int[n];
